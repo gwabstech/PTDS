@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/herader_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navHeader">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:civ_border_color="@color/big3"
+            android:src="@drawable/ic_baseline_medical_services_24"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/drawerNameD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Hello"
+            android:textColor="@color/big3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

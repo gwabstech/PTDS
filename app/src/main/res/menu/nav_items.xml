@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/selfD"
+        android:title="@string/self_test" />
+
+    <item
+        android:id="@+id/health_tips"
+        android:title="@string/daily_tips" />
+
+    <item
+        android:id="@+id/contact_Doctor"
+        android:title="@string/contact_doctor" />
+
+    <item
+        android:id="@+id/about_us"
+        android:title="@string/about_us" />
+
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout" />
+
+
+</menu>

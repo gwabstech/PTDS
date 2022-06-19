@@ -7,7 +7,7 @@
     android:background="@color/big"
     android:layout_height="match_parent"
     android:weightSum="1"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.activities.MainActivity">
 
 
 

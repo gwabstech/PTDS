@@ -14,11 +14,11 @@
         android:theme="@style/Theme.PTDS"
         tools:targetApi="31" >
         <activity
-            android:name=".activities.Dashboard"
+            android:name=".activities.activities.Dashboard"
             android:exported="false" />
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.activities.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>

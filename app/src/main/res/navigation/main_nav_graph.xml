@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gwabs.ptds.activities.fragments.Home"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        tools:layout="@layout/fragment_about_us"
+        android:name="com.gwabs.ptds.activities.fragments.About_us"
+        android:label="@string/about_us" />
+
+    <fragment
+        android:id="@+id/sF"
+        android:name="com.gwabs.ptds.activities.fragments.self_diagonostic"
+        android:label="@string/self_test"
+        tools:layout="@layout/fragment_self_diagonostic" />
+
+    <fragment
+        android:id="@+id/panierFragment"
+        android:name="com.gwabs.ptds.activities.fragments.consultDoctor"
+        android:label="@string/contact_doctor"
+        tools:layout="@layout/fragment_consult_doctor" />
+
+    <fragment
+        android:id="@+id/dailyTips"
+        android:name="com.gwabs.ptds.activities.fragments.DailyTips"
+        android:label="@string/daily_tips"
+        tools:layout="@layout/fragment_daily_tips" >
+        <action
+            android:id="@+id/action_dailyTips_to_sF"
+            app:destination="@id/sF" />
+        <action
+            android:id="@+id/action_dailyTips_to_panierFragment"
+            app:destination="@id/panierFragment" />
+        <action
+            android:id="@+id/action_dailyTips_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_dailyTips_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+</navigation>

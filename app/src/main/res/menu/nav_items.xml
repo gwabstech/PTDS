@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/Home"
+        android:id="@+id/homeFragment"
         android:title="@string/home" />
 
     <item
@@ -9,7 +9,7 @@
         android:title="@string/self_test" />
 
     <item
-        android:id="@+id/health_tips"
+        android:id="@+id/dailyTips"
         android:title="@string/daily_tips" />
 
     <item
@@ -17,7 +17,7 @@
         android:title="@string/contact_doctor" />
 
     <item
-        android:id="@+id/about_us"
+        android:id="@+id/aboutFragment"
         android:title="@string/about_us" />
 
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph.xml">
 
@@ -17,13 +18,13 @@
         android:label="@string/about_us" />
 
     <fragment
-        android:id="@+id/sF"
+        android:id="@+id/selfD"
         android:name="com.gwabs.ptds.activities.fragments.self_diagonostic"
         android:label="@string/self_test"
         tools:layout="@layout/fragment_self_diagonostic" />
 
     <fragment
-        android:id="@+id/panierFragment"
+        android:id="@+id/contact_Doctor"
         android:name="com.gwabs.ptds.activities.fragments.consultDoctor"
         android:label="@string/contact_doctor"
         tools:layout="@layout/fragment_consult_doctor" />
@@ -33,17 +34,5 @@
         android:name="com.gwabs.ptds.activities.fragments.DailyTips"
         android:label="@string/daily_tips"
         tools:layout="@layout/fragment_daily_tips" >
-        <action
-            android:id="@+id/action_dailyTips_to_sF"
-            app:destination="@id/sF" />
-        <action
-            android:id="@+id/action_dailyTips_to_panierFragment"
-            app:destination="@id/panierFragment" />
-        <action
-            android:id="@+id/action_dailyTips_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_dailyTips_to_aboutFragment"
-            app:destination="@id/aboutFragment" />
     </fragment>
 </navigation>

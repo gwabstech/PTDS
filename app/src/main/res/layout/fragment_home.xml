@@ -144,6 +144,20 @@
         </androidx.cardview.widget.CardView>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textIsSelectable="true"
+            android:text="Hello !! Welcome to PTDS Diagnostic system !!"
+            android:textColor="@color/big"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </ScrollView>

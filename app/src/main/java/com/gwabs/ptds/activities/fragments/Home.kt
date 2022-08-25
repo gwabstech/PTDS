@@ -1,29 +1,44 @@
-package com.gwabs.ptds.activities.fragments;
+package com.gwabs.ptds.activities.fragments
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.gwabs.ptds.R
+import com.gwabs.ptds.databinding.FragmentHomeBinding
 
-import androidx.fragment.app.Fragment;
+class Home : Fragment() {
+    private var _homeBinding: FragmentHomeBinding? = null
+    private val homeBinding  get() = _homeBinding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        _homeBinding = FragmentHomeBinding.inflate(inflater,container,false)
+        val view = homeBinding.root
 
-import com.gwabs.ptds.R;
-import com.gwabs.ptds.databinding.FragmentHomeBinding;
+        _homeBinding!!.marqueTxt.isSelected = true
+        _homeBinding!!.selfDiagonostic.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_selfD)
+        }
+        _homeBinding!!.dailyTips.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_dailyTips)
+        }
+        _homeBinding!!.exerciseNRoutine.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_excersice_Routing)
+        }
+        _homeBinding!!.contactDoctor.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_contact_Doctor)
+        }
 
-
-public class Home extends Fragment {
-
-    private FragmentHomeBinding homeBinding ;
-
-
-    public Home() {
-        // Required empty public constructor
+        return view
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+    override fun onDestroy() {
+        super.onDestroy()
+        _homeBinding = null
     }
 }

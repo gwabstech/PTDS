@@ -9,7 +9,23 @@
         android:id="@+id/homeFragment"
         android:name="com.gwabs.ptds.activities.fragments.Home"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dailyTips"
+            app:destination="@id/dailyTips" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_excersice_Routing"
+            app:destination="@id/excersice_Routing" />
+        <action
+            android:id="@+id/action_homeFragment_to_contact_Doctor"
+            app:destination="@id/contact_Doctor" />
+        <action
+            android:id="@+id/action_homeFragment_to_selfD"
+            app:destination="@id/selfD" />
+    </fragment>
 
     <fragment
         android:id="@+id/aboutFragment"
@@ -35,4 +51,9 @@
         android:label="@string/daily_tips"
         tools:layout="@layout/fragment_daily_tips" >
     </fragment>
+    <fragment
+        android:id="@+id/excersice_Routing"
+        android:name="com.gwabs.ptds.activities.fragments.Excersice_Routing"
+        android:label="Exercise routing"
+        tools:layout="@layout/excersice_routing" />
 </navigation>

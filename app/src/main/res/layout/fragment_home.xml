@@ -13,12 +13,6 @@
         android:orientation="vertical"
         >
 
-
-
-
-
-
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
@@ -27,6 +21,7 @@
             app:cardCornerRadius="15dp"
             android:elevation="5dp"
             android:clickable="true"
+            android:id="@+id/selfDiagonostic"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="@color/big"
             android:layout_height="150dp"
@@ -63,6 +58,7 @@
                 android:layout_weight="0.5"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp"
+                android:id="@+id/dailyTips"
                 app:cardCornerRadius="15dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
@@ -72,14 +68,15 @@
                 android:focusable="true">
 
                 <TextView
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="sans-serif-black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
                     android:lineSpacingMultiplier="1.5"
                     android:text="Daily Tips"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="#283593"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
 
             </androidx.cardview.widget.CardView>
 
@@ -89,6 +86,7 @@
                 android:layout_weight="0.5"
                 app:cardElevation="5dp"
                 app:cardCornerRadius="15dp"
+                android:id="@+id/exercise_n_routine"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 app:cardBackgroundColor="@color/big2"
@@ -98,14 +96,15 @@
 
 
                 <TextView
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="sans-serif-black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
                     android:lineSpacingMultiplier="1.5"
                     android:text="@string/exercise_n_routine"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="#283593"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
 
             </androidx.cardview.widget.CardView>
 
@@ -124,6 +123,7 @@
             android:clickable="true"
             app:cardCornerRadius="15dp"
             android:elevation="5dp"
+            android:id="@+id/contact_Doctor"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="@color/big1"
             android:layout_height="150dp"
@@ -146,18 +146,24 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
             android:marqueeRepeatLimit="marquee_forever"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:id="@+id/marque_txt"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:textStyle="normal"
-            android:textSize="18sp"
-            android:textIsSelectable="true"
-            android:text="Hello !! Welcome to PTDS Diagnostic system !!"
+            android:text="@string/hello_welcome_to_ptds_diagnostic_system"
             android:textColor="@color/big"
-            android:layout_height="wrap_content"/>
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:textStyle="normal" />
     </LinearLayout>
 
 </ScrollView>

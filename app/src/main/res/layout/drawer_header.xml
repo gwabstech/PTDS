@@ -43,7 +43,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-light"
-            android:text="Hello"
+            android:text="Hello User Name"
             android:textColor="@color/big3"
             android:textSize="18sp"
             android:textStyle="bold"

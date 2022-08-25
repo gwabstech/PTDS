@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/big3"
+    android:background="@drawable/background"
+
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.fragments.Home">
 
@@ -23,7 +24,7 @@
             android:clickable="true"
             android:id="@+id/selfDiagonostic"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/big"
+            app:cardBackgroundColor="#E206283D"
             android:layout_height="150dp"
             android:focusable="true">
 
@@ -62,7 +63,7 @@
                 app:cardCornerRadius="15dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                app:cardBackgroundColor="@color/big2"
+                app:cardBackgroundColor="#E647B5FF"
                 android:layout_marginBottom="10dp"
                 android:layout_height="150dp"
                 android:focusable="true">
@@ -89,7 +90,7 @@
                 android:id="@+id/exercise_n_routine"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                app:cardBackgroundColor="@color/big2"
+                app:cardBackgroundColor="#E647B5FF"
                 android:layout_marginBottom="10dp"
                 android:layout_height="150dp"
                 android:focusable="true">
@@ -125,7 +126,7 @@
             android:elevation="5dp"
             android:id="@+id/contact_Doctor"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/big1"
+            app:cardBackgroundColor="#CC1363DF"
             android:layout_height="150dp"
             android:focusable="true">
 
@@ -160,7 +161,7 @@
             android:scrollHorizontally="true"
             android:singleLine="true"
             android:text="@string/hello_welcome_to_ptds_diagnostic_system"
-            android:textColor="@color/big"
+            android:textColor="@color/white"
             android:textIsSelectable="false"
             android:textSize="18sp"
             android:textStyle="normal" />

@@ -15,9 +15,11 @@
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.5"
-           android:contentDescription="@string/ptds_image"
+           android:alpha="1.1"
+           android:background="@drawable/image_shape"
+           android:contentDescription="@string/get_started"
            android:scaleType="fitXY"
-           android:src="@drawable/ptdsimage" />
+           android:src="@drawable/get_started" />
 
 
     <RelativeLayout
@@ -95,6 +97,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/button_bg"
             android:fontFamily="sans-serif-black"
             android:padding="10dp"

@@ -13,4 +13,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="exercise_n_routine">Exercise \n Routine</string>
     <string name="hello_welcome_to_ptds_diagnostic_system">Hello !! Welcome to PTDS Diagnostic system !!</string>
+    <string name="section_a">Section A</string>
+
+    <string name="section_a_instruction"><b>Instructions:</b> This questionnaire asks about problems you may have had after a very stressful experience involving
+actual or threatened death, serious injury, or sexual violence. It could be something that happened to you directly,
+something you witnessed, or something you learned happened to a close family member or close friend. Some
+examples are a serious accident; fire; disaster such as a hurricane, tornado, or earthquake; physical or sexual attack or abuse; war; homicide; or suicide.\nFirst, please answer a few questions about your worst event, which for this questionnaire means the event that
+currently bothers you the most. This could be one of the examples above or some other very stressful experience. Also, it could be a single event (for example, a car crash) or multiple similar events (for example, multiple stressful events in a war-zone or repeated sexual abuse).
+    </string>
+    
+    <string name="worst_event_edt_label"><b>Briefly identify the worst event (if you feel comfortable doing so):</b>
+    </string>
+    <string name="how_long_ago_did_it_happen">How long ago did it happen?</string>
 </resources>
+

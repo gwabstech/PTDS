@@ -25,5 +25,19 @@ currently bothers you the most. This could be one of the examples above or some 
     <string name="worst_event_edt_label"><b>Briefly identify the worst event (if you feel comfortable doing so):</b>
     </string>
     <string name="how_long_ago_did_it_happen">How long ago did it happen?</string>
+    <string name="please_estimate_if_you_are_not_sure">please estimate if you are not sure</string>
+    <string name="did_it_involve_actual_or_threatened_death_serious_injury_or_sexual_violence">Did it involve actual or threatened death, serious injury, or sexual violence?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="how_did_you_experience_it">How did you experience it?</string>
+    <string name="it_happened_to_me_directly">It happened to me directly</string>
+    <string name="i_witnessed_it">I witnessed it</string>
+    <string name="i_learned_about_it_happening_to_a_close_family_member_or_close_friend">I learned about it happening to a close family member or close friend</string>
+    <string name="i_was_repeatedly_exposed_to_details_about_it_as_part_of_my_job_for_example_paramedic_police_military_or_other_first_responder">I was repeatedly exposed to details about it as part of my job (for example, paramedic, police, military, or other first responder)</string>
+    <string name="txt5">If the event involved the death of a close family member or close friend, was it due to some kind of accident or violence, or was it due to natural causes?</string>
+    <string name="accident_or_violence">Accident or violence</string>
+    <string name="natural_causes">Natural causes</string>
+    <string name="not_applicable_the_event_did_not_involve_the_death_of_a_close_family_member_or_close_friend">Not applicable (the event did not involve the death of a close family member or close friend)</string>
+    <string name="text_here">text here</string>
 </resources>
 

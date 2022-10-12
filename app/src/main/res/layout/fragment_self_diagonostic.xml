@@ -28,299 +28,348 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                app:cardCornerRadius="8dp"
-                android:elevation="5dp"
-                app:cardBackgroundColor="@color/big2"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingMultiplier="1.5"
-                    android:padding="10dp"
-                    android:text="@string/section_a_instruction"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textStyle="normal" />
-
-            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:id="@+id/criterion_a_layout"
-                android:layout_height="wrap_content">
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/creteria1"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@android:color/black" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textStyle="bold"
-                    android:id="@+id/txt1"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:textColor="@color/black"
-                    android:text="@string/worst_event_edt_label"
-                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.5"
+                        android:padding="10dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:background="@drawable/txt_headerbg"
+                        android:text="@string/section_a_instruction"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
 
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:autofillHints="Todo"
-                    android:hint="@string/text_here"
-                    android:inputType="textMultiLine"
-                    android:minHeight="80dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:id="@+id/txt2"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="@string/how_long_ago_did_it_happen"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:inputType="textPhonetic"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:minHeight="50dp"
-                    android:layout_marginBottom="5dp"
-                    android:hint="@string/please_estimate_if_you_are_not_sure"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Todo" />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
+                    android:id="@+id/criterion_a_layout"
                     android:layout_height="wrap_content">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textStyle="bold"
+                        android:id="@+id/txt1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="@color/black"
+                        android:text="@string/worst_event_edt_label"
+                        android:layout_height="wrap_content"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:autofillHints="Todo"
+                        android:hint="@string/text_here"
+                        android:inputType="textMultiLine"
+                        android:minHeight="80dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:id="@+id/txt3"
+                        android:id="@+id/txt2"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/did_it_involve_actual_or_threatened_death_serious_injury_or_sexual_violence"
+                        android:text="@string/how_long_ago_did_it_happen"
                         android:layout_height="wrap_content"/>
 
-                    <RadioGroup
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:inputType="textPhonetic"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:minHeight="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="@string/please_estimate_if_you_are_not_sure"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Todo" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:id="@+id/group1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
                         android:layout_height="wrap_content">
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/yes"
-                            android:id="@+id/YES"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:id="@+id/txt3"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/did_it_involve_actual_or_threatened_death_serious_injury_or_sexual_violence"
+                            android:layout_height="wrap_content"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/no"
-                            android:id="@+id/NO"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/group1"
+                            android:layout_height="wrap_content">
 
-                    </RadioGroup>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:id="@+id/YES"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-                </LinearLayout>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:id="@+id/NO"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@android:color/black" />
+                        </RadioGroup>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content">
+                    </LinearLayout>
 
-                    <TextView
+                    <View
                         android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:id="@+id/txt4"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/how_did_you_experience_it"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/group2"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/it_happened_to_me_directly"
+                                android:id="@+id/g2_1"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/i_witnessed_it"
+                                android:id="@+id/g2_2"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/i_learned_about_it_happening_to_a_close_family_member_or_close_friend"
+                                android:id="@+id/g2_3"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/i_was_repeatedly_exposed_to_details_about_it_as_part_of_my_job_for_example_paramedic_police_military_or_other_first_responder"
+                                android:id="@+id/g2_4"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:id="@+id/txt5"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/txt5"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/group3"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/accident_or_violence"
+                                android:id="@+id/g3_1"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/natural_causes"
+                                android:id="@+id/g3_2"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/not_applicable_the_event_did_not_involve_the_death_of_a_close_family_member_or_close_friend"
+                                android:id="@+id/g3_3"
+                                android:layout_margin="5dp"
+                                android:checked="false"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        </RadioGroup>
+
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/black" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/btnNext"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:id="@+id/txt4"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="@string/how_did_you_experience_it"
+                        android:text="@string/next"
+                        android:background="@drawable/dack_btn_bg"
+                        android:textColor="#fff"
                         android:layout_height="wrap_content"/>
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:id="@+id/group2"
-                        android:layout_height="wrap_content">
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/it_happened_to_me_directly"
-                            android:id="@+id/g2_1"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/i_witnessed_it"
-                            android:id="@+id/g2_2"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/i_learned_about_it_happening_to_a_close_family_member_or_close_friend"
-                            android:id="@+id/g2_3"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/i_was_repeatedly_exposed_to_details_about_it_as_part_of_my_job_for_example_paramedic_police_military_or_other_first_responder"
-                            android:id="@+id/g2_4"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                    </RadioGroup>
 
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@android:color/black" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:id="@+id/txt5"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="@string/txt5"
-                        android:layout_height="wrap_content"/>
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:id="@+id/group3"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/accident_or_violence"
-                            android:id="@+id/g3_1"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/natural_causes"
-                            android:id="@+id/g3_2"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_applicable_the_event_did_not_involve_the_death_of_a_close_family_member_or_close_friend"
-                            android:id="@+id/g3_3"
-                            android:layout_margin="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@android:color/black" />
 
 
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="5dp"
+                    app:cardBackgroundColor="@color/big2"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.5"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:text="@string/section_b_instructions"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
         </LinearLayout>
+
+
 
     </ScrollView>
 

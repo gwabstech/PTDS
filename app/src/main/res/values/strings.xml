@@ -15,7 +15,7 @@
     <string name="hello_welcome_to_ptds_diagnostic_system">Hello !! Welcome to PTDS Diagnostic system !!</string>
     <string name="section_a">Section A</string>
 
-    <string name="section_a_instruction"><b>Instructions:</b> This questionnaire asks about problems you may have had after a very stressful experience involving
+    <string name="section_a_instruction">This questionnaire asks about problems you may have had after a very stressful experience involving
 actual or threatened death, serious injury, or sexual violence. It could be something that happened to you directly,
 something you witnessed, or something you learned happened to a close family member or close friend. Some
 examples are a serious accident; fire; disaster such as a hurricane, tornado, or earthquake; physical or sexual attack or abuse; war; homicide; or suicide.\nFirst, please answer a few questions about your worst event, which for this questionnaire means the event that
@@ -39,7 +39,6 @@ currently bothers you the most. This could be one of the examples above or some 
     <string name="natural_causes">Natural causes</string>
     <string name="not_applicable_the_event_did_not_involve_the_death_of_a_close_family_member_or_close_friend">Not applicable (the event did not involve the death of a close family member or close friend)</string>
     <string name="text_here">text here</string>
-    <string name="section_b_instructions">Below is a list of problems that people sometimes have in response to a very stressful experience. Keeping your worst event in mind, please read each problem carefully and then circle one of the numbers to the right to indicate how much you have been bothered by that problem in the past month.</string>
     <string name="next">Next</string>
     <string name="section_1_question">In the past month, how much were you bothered by:</string>
     <string name="not_at_all">Not at all</string>
@@ -47,8 +46,16 @@ currently bothers you the most. This could be one of the examples above or some 
     <string name="moderately">Moderately</string>
     <string name="quite_a_bit">Quite a bit</string>
     <string name="extremely">Extremely</string>
+    <string name="section_b_title">Section B</string>
+    <string name="proceed">Proceed</string>
 
 
+    <string name="section2Instrictions">
+       This section contains a list of problems that people sometimes have in response to a very stressful experience. Keeping
+your worst event in mind, please read each problem carefully and then circle one of the numbers to the right to
+indicate how much you have been bothered by that problem in the past month.
+    </string>
+    <string name="optional">Optional</string>
     <string-array name="section_2">
         <item>
             Repeated, disturbing, and unwanted memories of the stressful experience?

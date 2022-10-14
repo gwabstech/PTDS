@@ -15,6 +15,7 @@
         android:textAlignment="center"
         android:textColorHighlight="@color/big"
         android:textStyle="bold"
+        android:id="@+id/txtSectionTitle"
         android:text="@string/section_a"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_height="wrap_content"/>
@@ -46,39 +47,16 @@
                 android:layout_height="wrap_content"
                 tools:ignore="UselessParent">
 
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lineSpacingMultiplier="1.5"
-                        android:padding="10dp"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:background="@drawable/txt_headerbg"
-                        android:text="@string/section_a_instruction"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-                        android:textStyle="normal" />
-
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:id="@+id/criterion_a_layout"
                     android:layout_height="wrap_content">
 
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@android:color/black" />
-
                     <TextView
                         android:layout_width="match_parent"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
                         android:textStyle="bold"
                         android:id="@+id/txt1"
                         android:layout_marginStart="5dp"
@@ -94,13 +72,15 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:autofillHints="Todo"
-                        android:hint="@string/text_here"
+                        android:textSize="18sp"
+                        android:hint="@string/optional"
                         android:inputType="textMultiLine"
                         android:minHeight="80dp" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:id="@+id/txt2"
@@ -116,6 +96,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:minHeight="50dp"
+                        android:textSize="18sp"
                         android:layout_marginBottom="5dp"
                         android:hint="@string/please_estimate_if_you_are_not_sure"
                         android:layout_height="wrap_content"
@@ -142,6 +123,8 @@
                             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                             android:textStyle="bold"
                             android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
                             android:id="@+id/txt3"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="10dp"
@@ -162,7 +145,7 @@
                                 android:id="@+id/YES"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -171,7 +154,7 @@
                                 android:id="@+id/NO"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                         </RadioGroup>
 
@@ -198,6 +181,8 @@
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:id="@+id/txt4"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="5dp"
@@ -217,7 +202,7 @@
                                 android:id="@+id/g2_1"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -226,7 +211,7 @@
                                 android:id="@+id/g2_2"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp"/>
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -235,7 +220,7 @@
                                 android:id="@+id/g2_3"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -244,7 +229,7 @@
                                 android:id="@+id/g2_4"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                         </RadioGroup>
 
@@ -267,7 +252,8 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:id="@+id/txt5"
@@ -290,7 +276,7 @@
                                 android:id="@+id/g3_1"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -299,7 +285,7 @@
                                 android:id="@+id/g3_2"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -308,7 +294,7 @@
                                 android:id="@+id/g3_3"
                                 android:layout_margin="5dp"
                                 android:checked="false"
-                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                                android:textSize="20sp" />
 
                         </RadioGroup>
 
@@ -340,31 +326,116 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:layout_margin="5dp"
+                android:id="@+id/creteria2"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
 
-                <androidx.cardview.widget.CardView
+                <TextView
                     android:layout_width="match_parent"
-                    app:cardCornerRadius="8dp"
-                    android:elevation="5dp"
-                    app:cardBackgroundColor="@color/big2"
+                    android:background="@drawable/textview_bg"
+                    android:minHeight="70dp"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="@string/section_1_question"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lineSpacingMultiplier="1.5"
-                        android:padding="10dp"
-                        android:visibility="gone"
-                        android:text="@string/section_b_instructions"
-                        android:textAlignment="textStart"
+                        android:background="@drawable/txt_headerbg"
+                        android:minHeight="70dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="2dp"
                         android:textColor="@color/black"
-                        android:textStyle="normal" />
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
+                        android:autoSizeStepGranularity="2sp"
+                        android:id="@+id/txt_question_section2"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UnusedAttribute" />
 
-                </androidx.cardview.widget.CardView>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radio_btn_options"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/txt_question_section2"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/not_at_all"
+                            android:id="@+id/rb_zero"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_little_bit"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_one"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/moderately"
+                            android:id="@+id/rb_two"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quite_a_bit"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_three"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/extremely"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_four"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@drawable/dack_btn_bg"
+                    android:layout_margin="20dp"
+                    android:id="@+id/btnSection2btnNext"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="Next"
+                    android:layout_height="wrap_content"/>
+
             </LinearLayout>
 
         </LinearLayout>

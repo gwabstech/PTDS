@@ -1,9 +1,13 @@
 package com.gwabs.ptds.activities.fragments
 
+import android.app.Dialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.gwabs.ptds.R
@@ -22,6 +26,7 @@ class Home : Fragment() {
 
         _homeBinding!!.marqueTxt.isSelected = true
         _homeBinding!!.selfDiagonostic.setOnClickListener {
+            showDialog(requireContext(),false,getString(R.string.section_a_instruction).toString())
             it.findNavController().navigate(R.id.action_homeFragment_to_selfD)
         }
         _homeBinding!!.dailyTips.setOnClickListener {
@@ -40,5 +45,29 @@ class Home : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _homeBinding = null
+    }
+
+
+    fun showDialog(context : Context, cancelable: Boolean, message:String, title:String = "Instructions"){
+        val dialog = Dialog(context, R.style.CustomAlertDialog)
+        dialog.setCancelable(cancelable)
+        dialog.setContentView(R.layout.dialog_custom_view);
+        val txtTitle = dialog.findViewById<TextView>(R.id.txtTitle)
+        val txtMessage = dialog.findViewById<TextView>(R.id.txtMessage)
+        val btnProceed = dialog.findViewById<Button>(R.id.btnProceed)
+        txtTitle.text = title
+        txtMessage.text = message
+
+        btnProceed.setOnClickListener {
+            dialog.dismiss()
+        }
+
+
+        if (dialog.isShowing)
+            dialog.dismiss()
+
+        dialog.show()
+
+
     }
 }

@@ -37,12 +37,124 @@
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:layout_margin="5dp"
-                android:visibility="visible"
                 android:id="@+id/creteria1"
+                android:visibility="visible"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/textview_bg"
+                    android:minHeight="70dp"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="@string/section_1_question"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="@drawable/txt_headerbg"
+                        android:minHeight="70dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/black"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
+                        android:autoSizeStepGranularity="2sp"
+                        android:id="@+id/txt_question_section2"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UnusedAttribute" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radio_btn_options"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/txt_question_section2"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/not_at_all"
+                            android:id="@+id/rb_zero"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_little_bit"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_one"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/moderately"
+                            android:id="@+id/rb_two"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quite_a_bit"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_three"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/extremely"
+                            android:layout_margin="10dp"
+                            android:id="@+id/rb_four"
+                            android:padding="5dp"
+                            android:checked="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@drawable/dack_btn_bg"
+                    android:layout_margin="20dp"
+                    android:id="@+id/btnSection2btnNext"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="Next"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:id="@+id/creteria2"
                 android:layout_marginBottom="10dp"
                 android:layout_height="wrap_content"
                 tools:ignore="UselessParent">
@@ -326,117 +438,6 @@
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="5dp"
-                android:id="@+id/creteria2"
-                android:visibility="gone"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:background="@drawable/textview_bg"
-                    android:minHeight="70dp"
-                    android:gravity="center"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:text="@string/section_1_question"
-                    android:textColor="@color/white"
-                    android:layout_height="wrap_content"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:background="@drawable/txt_headerbg"
-                        android:minHeight="70dp"
-                        android:gravity="center"
-                        android:lineSpacingExtra="2dp"
-                        android:textColor="@color/black"
-                        android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="12sp"
-                        android:autoSizeMaxTextSize="20sp"
-                        android:autoSizeStepGranularity="2sp"
-                        android:id="@+id/txt_question_section2"
-                        android:layout_height="wrap_content"
-                        tools:ignore="UnusedAttribute" />
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:id="@+id/radio_btn_options"
-                        android:layout_marginTop="20dp"
-                        android:layout_below="@id/txt_question_section2"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:id="@+id/rb_zero"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/a_little_bit"
-                            android:layout_margin="10dp"
-                            android:id="@+id/rb_one"
-                            android:padding="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/moderately"
-                            android:id="@+id/rb_two"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/quite_a_bit"
-                            android:layout_margin="10dp"
-                            android:id="@+id/rb_three"
-                            android:padding="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/extremely"
-                            android:layout_margin="10dp"
-                            android:id="@+id/rb_four"
-                            android:padding="5dp"
-                            android:checked="false"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-
-                    </RadioGroup>
-                </RelativeLayout>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:background="@drawable/dack_btn_bg"
-                    android:layout_margin="20dp"
-                    android:id="@+id/btnSection2btnNext"
-                    android:textColor="@color/white"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:text="Next"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
 
         </LinearLayout>
 

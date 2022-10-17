@@ -26,7 +26,9 @@ class Home : Fragment() {
 
         _homeBinding!!.marqueTxt.isSelected = true
         _homeBinding!!.selfDiagonostic.setOnClickListener {
-            showDialog(requireContext(),false,getString(R.string.section_a_instruction).toString())
+            //
+
+            showDialog(requireContext(),false,getString(R.string.section2Instrictions).toString())
             it.findNavController().navigate(R.id.action_homeFragment_to_selfD)
         }
         _homeBinding!!.dailyTips.setOnClickListener {

@@ -120,6 +120,20 @@ indicate how much you have been bothered by that problem in the past month.
     </string-array>
 
 
+    <string-array name="tips">
+        <item><b>Breathing:</b> sit straight in a chair, put one hand one your chest and the other on your abdomen, take a deep breath through your nose (the hand on your abdomen should rise while the one on your chest should move very little), then exhale as much as you can through your mouth (this time, the hand on your abdomen should move in, while the hand one your chest should only move a little), repeat this multiple times. (N.B if you have difficulty doing this while sitting, lie on your back)</item>
+        <item><b>Progressive muscle relaxation:</b> this involves tensing and relaxing different groups of muscles in the body. You can start with your left foot by trying to tense the muscles in the foot, then count to 10 and relax the muscles. While relaxing, take slow deep breaths, then shift to another set of muscles, say the right foot. Try to focus on one group muscles at a time. </item>
+        <item><b>Visualization:</b> this involves imagining yourself in a place or scene where you feel at peace, free, without tension or anxiety. Close your eyes and imagine restful place. Try to picture it as vividly as possible: everything you would hear, see, smell, taste and feel.</item>
+        <item><b>Self massage:</b> Massage is known to reduce stress, relieves pain and ease muscle tension. And it is possible to reap this benefit at home by practicing self-massaging. Try to take a few minutes at home or between tasks, on the couch or in bed before sleep. Parts that can be massaged include the scalp, face, neck and shoulders.</item>
+        <item><b>Rhythmic movement/mindful exercise</b>running, walking, swimming, dancing, rowing and climbing): while these exercises may seem stressful, they will get you into a flow of repetitive movement and produce relaxation response subsequently.</item>
+        <item><b>Yoga:</b> this involves a combination of poses: both moving and stationary. This is combined with deep breathing. Yoga is instrumental in reducing stress and anxiety, also it has been shown to improve balance, stamina, strength and flexibility. It is important to learn yoga from professionals before practicing on your own as injuries can result from incorrect poses.</item>
+        <item><b>Pursue outdoor activities</b> like football, basketball, volleyball, badminton and table tennis among others.</item>
+        <item><b>Confide in a person you trust:</b> talk to someone you can connect with and trust. A person who will listen to you without judging, criticizing or getting distracted. It could be your spouse, family member or a friend.</item>
+        <item><b>Spend time with positive people:</b> its important you spend most of your time with people that will encourage you and cheer you up.</item>
+        <item><b>Avoid alcohol and drugs:</b> try to resist the temptation to self-medicate with drugs or alcohol. This will worsen your symptoms.</item>
+
+    </string-array>
+
 </resources>
 
 

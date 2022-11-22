@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         val view: View = mainBinding!!.root
         setContentView(view)
-        mainBinding!!.btnGetStarted.setOnClickListener { view1: View? ->
+        mainBinding!!.btnGetStarted.setOnClickListener {
             //Toast.makeText(this, "you clicked me", Toast.LENGTH_SHORT).show();
             val intent = Intent(this, Dashboard::class.java)
             startActivity(intent)

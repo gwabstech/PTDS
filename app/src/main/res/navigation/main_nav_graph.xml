@@ -37,7 +37,16 @@
         android:id="@+id/selfD"
         android:name="com.gwabs.ptds.activities.fragments.self_diagnostic"
         android:label="@string/self_test"
-        tools:layout="@layout/fragment_self_diagonostic" />
+        tools:layout="@layout/fragment_self_diagonostic" >
+        <action
+            android:id="@+id/action_selfD_to_excersice_Routing"
+            app:destination="@id/excersice_Routing"
+            app:popUpTo="@id/excersice_Routing"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_selfD_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/contact_Doctor"

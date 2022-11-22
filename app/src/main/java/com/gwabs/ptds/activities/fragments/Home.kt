@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.gwabs.ptds.R
 import com.gwabs.ptds.databinding.FragmentHomeBinding
@@ -48,6 +49,7 @@ class Home : Fragment() {
         super.onDestroy()
         _homeBinding = null
     }
+
 
 
     fun showDialog(context : Context, cancelable: Boolean, message:String, title:String = "Instructions"){

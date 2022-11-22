@@ -8,10 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.gwabs.ptds.R
+import com.gwabs.ptds.activities.utils.sendMessage
+import com.gwabs.ptds.activities.utils.showNegativeDialog
 import com.gwabs.ptds.databinding.FragmentSelfDiagonosticBinding
 import kotlin.properties.Delegates
 
@@ -24,6 +28,14 @@ class self_diagnostic : Fragment() {
     private val section2QuestionList = ArrayList<String>()
     private val scores = ArrayList<Int>()
 
+    lateinit var label1Response: String
+    lateinit var label2Response: String
+    lateinit var label3Response: String
+    var label4Response: String = "Null"
+    var label5Response: String = "null"
+    lateinit var name: String
+    var age = 0
+    lateinit var gender: String
 
 
     override fun onCreateView(
@@ -42,32 +54,110 @@ class self_diagnostic : Fragment() {
 
         _binding!!.btnNext.setOnClickListener {
 
+            val label1 = _binding!!.txt1.text.toString()
+            val label2 = _binding!!.txt2.text.toString()
+            val label3 = _binding!!.txt3.text.toString()
+            val label4 = _binding!!.txt4.text.toString()
+            val label5 = _binding!!.txt5.text.toString()
 
-            Toast.makeText(
-                requireContext(),
-                "You Have Some issues please see doctor your score is $total please contact doctor",
-                Toast.LENGTH_LONG
-            ).show()
 
 
-           // contactDoctor()
+
+            contactDoctor(label1,label2,label3,label4,label5)
+
 
         }
 
         _binding!!.btnSection2btnNext.setOnClickListener {
-            Toast.makeText(requireContext(),"yes "+counter,Toast.LENGTH_SHORT).show()
             handleSectionB()
         }
-
-
         return view
     }
-/*
-    private fun contactDoctor() {
-        TODO("Not yet implemented")
-    }
 
- */
+    fun contactDoctor(
+        label1: String,
+        label2: String,
+        label3: String,
+        label4: String,
+        label5: String
+    ) {
+
+        label1Response = _binding!!.edtLabel1Response.text.toString()
+        label2Response = _binding!!.edtLabel2Response.text.toString()
+
+
+        if (_binding!!.YES.isChecked) {
+
+            label3Response = _binding!!.YES.text.toString()
+        } else {
+            label3Response = _binding!!.NO.text.toString()
+        }
+
+        when(_binding!!.group2.checkedRadioButtonId){
+            binding?.g21?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g21.id)
+                if (rad != null) {
+                    label4Response = rad.text.toString()
+                }
+            }
+            binding?.g22?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g22.id)
+                if (rad != null) {
+                    label4Response = rad.text.toString()
+                }
+            }
+            binding?.g23?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g23.id)
+                if (rad != null) {
+                    label4Response = rad.text.toString()
+                }
+            }
+            binding?.g24?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g24.id)
+                if (rad != null) {
+                    label4Response = rad.text.toString()
+                }
+            }
+            else->{
+                Toast.makeText(requireContext(),"NO value",Toast.LENGTH_LONG).show()
+            }
+        }
+
+        when(_binding!!.group3.checkedRadioButtonId){
+
+            binding?.g31?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g31.id)
+                if (rad != null) {
+                    label5Response = rad.text.toString()
+                }
+            }
+            binding?.g32?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g32.id)
+                if (rad != null) {
+                    label5Response = rad.text.toString()
+                }
+            }
+            binding?.g33?.id ->{
+                val rad = view?.findViewById<RadioButton>(_binding!!.g33.id)
+                if (rad != null) {
+                    label5Response = rad.text.toString()
+                }
+            }
+            else->{
+                Toast.makeText(requireContext(),"NO value",Toast.LENGTH_LONG).show()
+            }
+        }
+
+        name = "Abubakar"
+        gender = "Male"
+        age = 26
+        sendMessage(
+            requireActivity(),
+            "PATIENT INFORMATION\nHello doctor i want to book appointment with you here are my self diagnostic result... \nName: $name\nGender $gender\nAge: $age\nStatus Percentage $total"+"%"+"\n\nQuestion 1 :\n$label1" +
+                    "\nResponse : \n$label1Response \n\nQuestion 2 :\n$label2\nResponse :\n$label2Response\n\nQuestion 3 :\n" +
+                    "$label3\nResponse : \n$label3Response\n\nQuestion 4 :\n$label4\nResponse : \n$label4Response\n\nQuestion 5 :\n $label5\nResponse : \n$label5Response",findNavController()
+        )
+    }
 
 
     fun handleSectionB() {
@@ -76,15 +166,17 @@ class self_diagnostic : Fragment() {
         when {
             counter >= 19 -> {
 
-                val clusterA = checkCluster(1,5,1)
-                val clusterB = checkCluster(6,7,1)
-                val clusterC = checkCluster(2,14,2)
-                val clusterD = checkCluster(15,20,2)
+                val clusterA = checkCluster(1, 5, 1)
+                val clusterB = checkCluster(6, 7, 1)
+                val clusterC = checkCluster(2, 14, 2)
+                val clusterD = checkCluster(15, 20, 2)
 
 
-                if (((clusterA && clusterB)  || (clusterC && clusterD)) && total >= 31){
+                if (((clusterA && clusterB) || (clusterC && clusterD)) && total >= 31) {
                     showDialog(requireContext(), false, getString(R.string.section_a_instruction))
                 } else {
+
+                    showNegativeDialog(requireContext(),requireActivity(),"Nagetive No issue found your score is $scores",false,findNavController())
                     Toast.makeText(
                         requireContext(),
                         "No issue found your score is $total",
@@ -122,14 +214,14 @@ class self_diagnostic : Fragment() {
                         calculateTotal(4)
                     }
                 }
-                counter = counter+1
+                counter = counter + 1
             }
         }
 
 
     }
 
-    fun calculateTotal(point : Int){
+    fun calculateTotal(point: Int) {
         total += point
     }
 
@@ -192,11 +284,11 @@ class self_diagnostic : Fragment() {
                             newArray.add(scores.get(i))
                         }
                     }
-                    Log.i("TAG",newArray.toString())
+                    Log.i("TAG", newArray.toString())
                     if (newArray.size >= check) {
                         cluster = true
                     }
-                }catch (e:IndexOutOfBoundsException){
+                } catch (e: IndexOutOfBoundsException) {
                     e.printStackTrace()
                 }
 
@@ -209,11 +301,11 @@ class self_diagnostic : Fragment() {
                             newArray.add(scores.get(i))
                         }
                     }
-                    Log.i("TAG",newArray.toString())
+                    Log.i("TAG", newArray.toString())
                     if (newArray.size >= check) {
                         cluster = true
                     }
-                }catch (e:IndexOutOfBoundsException){
+                } catch (e: IndexOutOfBoundsException) {
                     e.printStackTrace()
                 }
 
@@ -227,11 +319,11 @@ class self_diagnostic : Fragment() {
                             newArray.add(scores.get(i))
                         }
                     }
-                    Log.i("TAG",newArray.toString())
+                    Log.i("TAG", newArray.toString())
                     if (newArray.size >= check) {
                         cluster = true
                     }
-                }catch (e:IndexOutOfBoundsException){
+                } catch (e: IndexOutOfBoundsException) {
                     e.printStackTrace()
                 }
 
@@ -246,11 +338,11 @@ class self_diagnostic : Fragment() {
                             newArray.add(scores.get(i))
                         }
                     }
-                    Log.i("TAG",newArray.toString())
+                    Log.i("TAG", newArray.toString())
                     if (newArray.size >= check) {
                         cluster = true
                     }
-                }catch (e:java.lang.IndexOutOfBoundsException){
+                } catch (e: java.lang.IndexOutOfBoundsException) {
                     e.printStackTrace()
                 }
 

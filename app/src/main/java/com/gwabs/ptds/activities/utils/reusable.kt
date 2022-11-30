@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.NavController
@@ -60,10 +61,20 @@ fun showNegativeDialog(context: Context,activity: Activity,meesage:String,status
     // TODO: implement me i should show up to patient if its negative
     val dialog = AlertDialog.Builder(context, R.style.CustomAlertDialog)
         .create()
-    val view = activity.layoutInflater.inflate(R.layout.positive_dialog, null)
+    val view = activity.layoutInflater.inflate(R.layout.nagative_dialog, null)
     dialog.setContentView(R.layout.nagative_dialog)
     dialog.setCanceledOnTouchOutside(true)
-    navController.navigate(R.id.action_selfD_to_excersice_Routing)
+    val daiilyTips = view.findViewById<Button>(R.id.btnDailyHealthTips)
+    val home = view.findViewById<Button>(R.id.btnToHome)
+    daiilyTips.setOnClickListener {
+        navController.navigate(R.id.action_selfD_to_dailyTips)
+        dialog.dismiss()
+    }
+    home.setOnClickListener {
+        navController.navigate(R.id.action_selfD_to_homeFragment)
+        dialog.dismiss()
+    }
+    //
     dialog.setView(view)
     dialog.setCanceledOnTouchOutside(true)
     dialog.show()

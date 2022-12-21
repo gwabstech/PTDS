@@ -42,7 +42,7 @@ fun sendMessage(activity: Activity,message:String,navController: NavController){
     }
 }
 
-fun showPositiveDialog(context: Context,activity: Activity,meesage:String,status:Boolean){
+fun showPositiveDialog(function :() -> (Unit),context: Context,activity: Activity,meesage:String){
 
     // TODO: implement me i should show up to patient if its positive
     val dialog = AlertDialog.Builder(context, R.style.CustomAlertDialog)
@@ -50,14 +50,19 @@ fun showPositiveDialog(context: Context,activity: Activity,meesage:String,status
     val view = activity.layoutInflater.inflate(R.layout.positive_dialog, null)
     dialog.setContentView(R.layout.tips_dialog_view)
     dialog.setCanceledOnTouchOutside(true)
-
+    val message = view.findViewById<TextView>(R.id.txt_positive)
+    message.text = meesage
+    val contactDoctor = view.findViewById<Button>(R.id.btnContactDoctor)
+    contactDoctor.setOnClickListener {
+        function()
+    }
     dialog.setView(view)
     dialog.setCanceledOnTouchOutside(true)
     dialog.show()
 
 }
 
-fun showNegativeDialog(context: Context,activity: Activity,meesage:String,status:Boolean,navController: NavController){
+fun showNegativeDialog(context: Context,activity: Activity,meesage:String,navController: NavController){
     // TODO: implement me i should show up to patient if its negative
     val dialog = AlertDialog.Builder(context, R.style.CustomAlertDialog)
         .create()
@@ -66,6 +71,8 @@ fun showNegativeDialog(context: Context,activity: Activity,meesage:String,status
     dialog.setCanceledOnTouchOutside(true)
     val daiilyTips = view.findViewById<Button>(R.id.btnDailyHealthTips)
     val home = view.findViewById<Button>(R.id.btnToHome)
+    val txt_negative = view.findViewById<TextView>(R.id.txt_negative)
+    txt_negative.text = meesage
     daiilyTips.setOnClickListener {
         navController.navigate(R.id.action_selfD_to_dailyTips)
         dialog.dismiss()

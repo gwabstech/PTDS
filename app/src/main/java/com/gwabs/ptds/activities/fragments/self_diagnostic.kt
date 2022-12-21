@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.gwabs.ptds.R
 import com.gwabs.ptds.activities.utils.sendMessage
 import com.gwabs.ptds.activities.utils.showNegativeDialog
+import com.gwabs.ptds.activities.utils.showPositiveDialog
 import com.gwabs.ptds.databinding.FragmentSelfDiagonosticBinding
 import kotlin.properties.Delegates
 
@@ -58,12 +59,12 @@ class self_diagnostic : Fragment() {
             val label2 = _binding!!.txt2.text.toString()
             val label3 = _binding!!.txt3.text.toString()
             val label4 = _binding!!.txt4.text.toString()
-            val label5 = _binding!!.txt5.text.toString()
+            val labell5 = _binding!!.txt5.text.toString()
 
 
 
 
-            contactDoctor(label1,label2,label3,label4,label5)
+            contactDoctor(label1,label2,label3,label4,labell5)
 
 
         }
@@ -148,15 +149,26 @@ class self_diagnostic : Fragment() {
             }
         }
 
-        name = "Abubakar"
-        gender = "Male"
-        age = 26
-        sendMessage(
+
+        showPositiveDialog(
+            {
+                name = "Abubakar"
+                gender = "Male"
+                age = 26
+                sendMessage(
+                    requireActivity(),
+                    "PATIENT INFORMATION\nHello doctor i want to book appointment with you here are my self diagnostic result... \nName: $name\nGender $gender\nAge: $age\nStatus Percentage $total"+"%"+"\n\nQuestion 1 :\n$label1" +
+                            "\nResponse : \n$label1Response \n\nQuestion 2 :\n$label2\nResponse :\n$label2Response\n\nQuestion 3 :\n" +
+                            "$label3\nResponse : \n$label3Response\n\nQuestion 4 :\n$label4\nResponse : \n$label4Response\n\nQuestion 5 :\n $label5\nResponse : \n$label5Response",findNavController()
+                )
+            },requireContext(),
             requireActivity(),
-            "PATIENT INFORMATION\nHello doctor i want to book appointment with you here are my self diagnostic result... \nName: $name\nGender $gender\nAge: $age\nStatus Percentage $total"+"%"+"\n\nQuestion 1 :\n$label1" +
-                    "\nResponse : \n$label1Response \n\nQuestion 2 :\n$label2\nResponse :\n$label2Response\n\nQuestion 3 :\n" +
-                    "$label3\nResponse : \n$label3Response\n\nQuestion 4 :\n$label4\nResponse : \n$label4Response\n\nQuestion 5 :\n $label5\nResponse : \n$label5Response",findNavController()
+            "Base on the information you provided in the previours sections\n The result  shows $scores which is positive, You can contact doctor for more details"
+
         )
+        
+
+
     }
 
 
@@ -176,7 +188,7 @@ class self_diagnostic : Fragment() {
                     showDialog(requireContext(), false, getString(R.string.section_a_instruction))
                 } else {
 
-                    showNegativeDialog(requireContext(),requireActivity(),"Nagetive No issue found your score is $scores",false,findNavController())
+                    showNegativeDialog(requireContext(),requireActivity(),"Nagetive No issue found your score is $scores",findNavController())
                     Toast.makeText(
                         requireContext(),
                         "No issue found your score is $total",

@@ -39,7 +39,8 @@ class Home : Fragment() {
             it.findNavController().navigate(R.id.action_homeFragment_to_excersice_Routing)
         }
         _homeBinding!!.contactDoctor.setOnClickListener {
-            it.findNavController().navigate(R.id.action_homeFragment_to_contact_Doctor)
+            showDialog(requireContext(),false,getString(R.string.section2Instrictions).toString())
+            it.findNavController().navigate(R.id.action_homeFragment_to_selfD)
         }
 
         return view
